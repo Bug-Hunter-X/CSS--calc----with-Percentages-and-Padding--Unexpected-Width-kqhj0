@@ -1,0 +1,9 @@
+The following CSS code snippet demonstrates an uncommon issue where unexpected behavior occurs due to the use of the `calc()` function with percentages and padding.  The intention is to set the width of an element to 50% of its container, minus 20 pixels of padding. However, the padding is calculated based on the *unadjusted* width, causing the element to be wider than expected. 
+
+```css
+div {
+  width: calc(50% - 20px);
+  padding: 10px;
+  background-color: lightblue;
+}
+```
