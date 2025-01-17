@@ -1,0 +1,11 @@
+The solution involves using the `box-sizing` property. By setting `box-sizing: border-box;`, the padding is included within the element's total width, resolving the unexpected width calculation.
+
+```css
+div {
+  width: calc(50% - 20px);
+  padding: 10px;
+  background-color: lightblue;
+  box-sizing: border-box;
+}
+```
+Setting `box-sizing: border-box;` ensures that the padding is accounted for within the element's specified width. Therefore, the 20px padding is deducted from the 50% width that the element would be, resulting in a more accurate width calculation.
